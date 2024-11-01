@@ -1,0 +1,344 @@
+/* General styling */
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: 'Permanent Marker', cursive;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/concrete-wall-background.jpg') center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff; /* Ensures all text is white by default */
+}
+
+/* Shade overlay */
+.shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(150deg, rgba(0, 0, 0, 0.65), transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Centered container */
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  top: -40px;
+  z-index: 2;
+}
+
+/* School Information Styling */
+.school-info {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  z-index: 3;
+  font-size: 1.2rem;
+}
+
+.school-label {
+  color: #fff;
+  padding: 2px 0;
+}
+
+/* Welcome Message Styling */
+.welcome-message {
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Blackboard styling */
+.blackboard, #game-screen {
+  width: 90%;
+  max-width: 900px;
+  padding: 40px;
+  border: tan solid 12px;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5), 0px 0px 0px 2px #c2a782, 0px 0px 0px 4px #a58e6f, 3px 4px 8px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Registration Screen */
+.register-container {
+  text-align: center;
+  padding: 0px;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro-text {
+  font-size: 1.8rem;
+  color: #eee;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1.5rem;
+  color: #eee;
+}
+
+input[type="text"] {
+  font-size: 1.5rem;
+  padding: 15px;
+  width: 80%;
+  background-color: #444;
+  border: none;
+  border-radius: 5px;
+  color: #eee;
+  outline: none;
+}
+
+.start-text {
+  font-size: 1.8rem;
+  color: #eee;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: transform 0.3s ease;
+}
+
+.start-text:hover {
+  transform: scale(1.1);
+}
+
+/* Loading Screen */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #eee;
+  border-top: 6px solid #888;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Game Screen Layout */
+#game-screen {
+  display: none;
+  width: 90%;
+  max-width: 900px;
+  background-color: #444;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+/* Status Bar at the Top */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.2rem; /* Smaller text for status bar */
+  margin-bottom: 30px;
+}
+
+/* Question Container */
+#question-container {
+  margin: 60px 0;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Question Formatting */
+#question {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Answer Buttons */
+.answer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+  margin-top: 20px;
+}
+
+/* Style each button */
+.answer-buttons button {
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.answer-buttons button:hover {
+  background-color: #777; /* Darken on hover */
+  transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.answer-buttons button:active {
+  background-color: #444; /* Darken more when pressed */
+  transform: scale(0.95); /* Slightly shrink when clicked */
+}
+
+/* Player Info at Bottom Left */
+
+.player-info { 
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: left;
+}
+
+/* Score Info at Bottom Right */
+.score-info {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: right;
+}
+
+
+/* Team Members Styling */
+.team-name {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: rgba(34, 34, 34, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 3;
+}
+
+/* Utility class to hide elements */
+.hidden {
+  display: none;
+}
+
+
+.formatted-question {
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+#number {
+  font-size: 3rem; /* Larger font for the number/expression */
+  display: inline-block;
+}
+
+
+/* Popup overlay */
+/* Darkened Background for Popup */
+.end-game-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* High z-index to ensure it’s above all other elements */
+}
+
+/* Popup Content Styling */
+.end-game-content {
+  background: #333; /* Dark background to match the game theme */
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+}
+
+.end-game-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.end-game-content p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.end-game-content button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  background-color: #666;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.end-game-content button:hover {
+  background-color: #888;
+}
+
+
+
+#restart-button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* Hide popup by default */
+.hidden {
+  display: none;
+}
+
+
+.formatted-question {
+  font-size: 2.5rem; /* Adjust font size */
+  text-align: center;
+  line-height: 1.5; /* Adjust line height for spacing */
+}
